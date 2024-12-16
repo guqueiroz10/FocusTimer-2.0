@@ -28,6 +28,34 @@ export function addFiveMinutes() {
 
     minutes += 5
 
+    if (minutes >= 60){
+        minutes = 60
+    }
+
     state.minutes = minutes
     timer.updateDisplay(state.hours, state.minutes, state.seconds)
+}
+
+export function removeFiveMinutes() {
+    let minutes = Number(el.minutes.textContent)
+
+    minutes -= 5
+
+    if (minutes <= 0){
+        minutes = 0
+    }
+
+    state.minutes = minutes
+    timer.updateDisplay(state.hours, state.minutes, state.seconds)
+}
+
+export function toggleAudio(sound, button) {
+    if (sound.paused){
+        sound.play()
+        button.classList.add('active')
+    } else {
+        sound.pause()
+        button.classList.remove('active')
+    }
+
 }

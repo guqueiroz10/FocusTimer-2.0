@@ -54,14 +54,27 @@ export function setHours() {
     })
 }
 
-export function addTime() {
+export function updateTime() {
     el.plus.addEventListener('click', () => {
        actions.addFiveMinutes()
     })
+
+    el.minus.addEventListener('click', () => {
+        actions.removeFiveMinutes()
+     })
 }
 
-export function startForestSound() {
+export function updateSound() {
     el.forestSound.addEventListener('click', () => {
-        sounds.forestSound.play()
+       actions.toggleAudio(sounds.forestSound, event.target)
     })
+    el.rainySound.addEventListener('click', () => {
+        actions.toggleAudio(sounds.rainySound, event.target)
+     })
+     el.coffeSound.addEventListener('click', () => {
+        actions.toggleAudio(sounds.coffeSound, event.target)
+     })
+     el.firePlaceSound.addEventListener('click', () => {
+        actions.toggleAudio(sounds.firePlaceSound, event.target)
+     })
 }

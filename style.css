@@ -81,6 +81,11 @@ body {
     transition: background-color 1s, color 0.1s ease;
 }
 
+#sound-controls button.active {
+    background-color: var(--secondary-bg-bt);
+    color: var(--primary-bg);
+}
+
 .running .ph-fill.ph-play,
 .running .ph-fill.ph-timer,
 .music-on .ph-speaker-none,

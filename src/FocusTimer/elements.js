@@ -19,4 +19,13 @@ export const minus = document.getElementById
 export const forestSound = document.getElementById
 ('forest')
 
+export const rainySound = document.getElementById
+('rainy')
+
+export const coffeSound = document.getElementById
+('store-front')
+
+export const firePlaceSound = document.getElementById
+('fire')
+
 

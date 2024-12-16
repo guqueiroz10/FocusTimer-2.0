@@ -12,4 +12,6 @@ export function start(hours, minutes, seconds) {
     events.registerControls()
     events.setMinutes()
     events.setHours()
+    events.updateTime()
+    events.updateSound()
 }
